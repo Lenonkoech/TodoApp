@@ -1,0 +1,18 @@
+<!--Code for user to add tasks to the database-->
+<?php
+session_start();
+include "db.php";
+include "notifications.php";
+if (isset($_POST['add-task'])) {
+    $description = $_POST['description'];
+    $category = $_POST['category'];
+    $user = 1;
+    $start_date = $_POST['start-date'];
+    $end_date = $_POST['end-date'];
+    $status = $_POST['status'];
+    $sql = "INSERT into tasks (`user_id`,`start_date`,`end_date`,`description`,`category`,`status`) 
+    values('$user','$start_date','$end_date','$description','$category','$status')";
+    mysqli_query($conn, $sql);
+    addNotification("Task added !!!");
+    header("location:../index.php");
+}
