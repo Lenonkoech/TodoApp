@@ -1,0 +1,468 @@
+/* General styling for the entire page */
+/* Importing Google font - Open Sans */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Markers&family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+body {
+    font-family: "Open Sans",
+        sans-serif;
+    background-color: rgb(12, 1, 54);
+    margin: 0;
+    font-size: 13px;
+    color: white;
+
+}
+
+.wrapper {
+    max-width: 100%;
+    margin: 15px auto;
+    height: 100%;
+}
+
+/* Calendar container */
+.container-calendar {
+    background: transparent;
+    padding: 15px;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+/* Event section styling */
+#event-section {
+    padding: 10px;
+    background: #f5f5f5;
+    margin-left: 0px;
+    border: 1px solid #ccc;
+}
+
+#right {
+    margin-left: 50px;
+    flex: 4;
+}
+
+
+/* Buttons in the calendar */
+.button-container-calendar button {
+    cursor: pointer;
+    background: transparent;
+    color: #e472c9;
+    border: solid transparent;
+    /* border-radius: 4px;
+    padding: 5px 10px; */
+}
+
+/* Calendar table */
+.table-calendar {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table-calendar td,
+.table-calendar th {
+    padding: 5px;
+    border: 1px solid transparent;
+    text-align: center;
+    vertical-align: top;
+}
+
+.table-calendar th {
+    color: #b66ca5;
+}
+
+.table-calendar td {
+    border-radius: 5px;
+}
+
+/* Date picker */
+.date-picker.selected {
+    background-color: #e472c9;
+    font-weight: bold;
+    color: white;
+
+}
+
+.date-picker {
+    color: white;
+}
+
+.date-picker.selected span {
+    border-bottom: 2px solid currentColor;
+}
+
+/* Hover effect for date cells */
+.date-picker:hover {
+    background-color: #e472c9;
+    color: black;
+    cursor: pointer;
+}
+
+/* Header for month and year */
+#monthAndYear {
+    text-align: center;
+    margin-bottom: -20px;
+    color: #f0a8df;
+    text-transform: uppercase;
+}
+
+/* Navigation buttons */
+.button-container-calendar {
+    position: relative;
+    margin-bottom: 1em;
+    overflow: hidden;
+    clear: both;
+}
+
+#previous {
+    float: left;
+}
+
+#next {
+    float: right;
+}
+
+/* Footer styling */
+.footer-container-calendar {
+    margin-top: 1em;
+    padding: 10px 0;
+}
+
+.footer-container-calendar select {
+    cursor: pointer;
+    background: #ffffff;
+    color: #585858;
+    border: 1px solid #bfc5c5;
+    border-radius: 3px;
+    padding: 5px 1em;
+}
+
+/*task-bar*/
+.task-bar {
+    display: flex;
+}
+
+/*calendar menu */
+.calendar-menu {
+    color: White;
+
+}
+
+.calendar-menu li {
+    list-style: none;
+    margin-bottom: 10px;
+    padding-top: 8px;
+    padding-bottom: 12px;
+    padding-left: 8px;
+    margin-left: -30px;
+    color: white;
+    font-family: "Open Sans",
+        sans-serif;
+}
+
+.calendar-menu li ion-icon {
+    padding-right: 20px;
+    font-size: 17px;
+    margin-top: 0px;
+    margin-bottom: -4px;
+}
+
+.calendar-menu li:hover {
+    background-color: #e472c9;
+}
+
+.calendar-menu li {
+    text-decoration: none;
+    color: white;
+    font-family: "Open Sans",
+        sans-serif;
+}
+
+/*Aligning tasks*/
+.task-bar {
+    display: flex;
+    flex-direction: row;
+}
+
+.tasks form,
+.tasks {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.tasks form li {
+    list-style: none;
+    margin-right: 35px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    text-transform: capitalize;
+}
+
+.tasks {
+    list-style: none;
+}
+
+.tasks form li button.btn {
+    color: white;
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+
+.tasks li button.btn:hover {
+    color: #f0a8df;
+}
+
+/* 
+.tasks li:nth-last-child(n+3) {
+    margin-right: auto;
+
+} */
+
+.add,
+.delete {
+    border-width: 1px;
+    border-style: solid;
+    padding: 5px 10px 5px 10px;
+    color: white;
+    background-color: transparent;
+}
+
+.delete {
+    margin-left: -170px;
+
+}
+
+.add,
+.delete {
+    border-radius: 0px;
+    border-color: #e472e9;
+}
+
+.add {
+    margin-right: auto;
+}
+
+.delete {
+    margin-left: px;
+}
+
+.add {
+    background-color: #e472d9;
+}
+
+.add:hover,
+.delete:hover {
+    background-color: #e472c9;
+    color: white;
+}
+
+/* styling To do list table output*/
+.details_table {
+    color: white;
+}
+
+.details_table td {
+    background-color: rgb(12, 2, 57);
+    height: 30px;
+}
+
+
+.details_table td input,
+.details_table td select {
+    background-color: transparent;
+    color: white;
+    width: 100%;
+    border: none;
+    outline: none;
+
+}
+
+.details_table .status {
+    text-transform: capitalize;
+}
+
+.details_table .category {
+    color: #e472c9;
+    text-decoration: underline;
+    text-transform: capitalize;
+}
+
+.details_table .description {
+    text-transform: lowercase;
+}
+
+.details_table td select option {
+    color: #e472c9;
+    background-color: rgb(12, 1, 54);
+    font-family: "Open Sans",
+        sans-serif;
+}
+
+.details_table td select {
+    border-color: #e472c9;
+}
+
+.details_table th {
+    text-align: left;
+    font-weight: 400;
+}
+
+.details_table table {
+    border-collapse: collapse;
+}
+
+.details_table tr {
+    border: none;
+    box-shadow: 0 0 15px rgb(2, 2, 73);
+}
+
+/*removin calendar icon on date input*/
+.details_table td input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+#submit {
+    display: none;
+}
+
+/*Alligh the two left most buttons */
+.buttons {
+    display: flex;
+}
+
+/* style an active button */
+.tasks form li button:active {
+    color: #e472d9;
+}
+
+.toggle-buttons button {
+    display: none;
+}
+
+/*creting a floating manage tasks box*/
+.manage-tasks {
+    position: absolute;
+    margin-left: 260px;
+    margin-top: -300px;
+    width: 500px;
+    height: 300px;
+    background-color: rgb(24, 9, 84);
+}
+
+.box-header {
+    display: flex;
+    background-color: #e472d9;
+
+}
+
+.box-header button {
+    margin-left: auto;
+    background-color: transparent;
+    height: 30px;
+    color: white;
+    border: none;
+    font-size: 17px;
+}
+
+.box-header h2 {
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 0.5px;
+}
+
+.box-header ion-icon {
+    padding-right: 10px;
+    padding-left: 5px;
+    font-weight: 700;
+    margin-top: 3px;
+    font-size: 17px;
+    color: white;
+}
+
+.manage-buttons button {
+    color: white;
+    border-color: #e472c9;
+    border-style: solid;
+    background-color: transparent;
+    border-width: 0.2px;
+    margin-top: 2px;
+    font-size: 13px;
+    height: 30px;
+    padding-left: 22px;
+    padding-right: 22px;
+}
+
+.manage-buttons button.mng-add {
+    background-color: #e472c9;
+}
+
+.category-box h2 {
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.category-box {
+    margin-left: 60px;
+}
+
+.category-box table tr td {
+    width: 435px;
+    background-color: rgb(2, 2, 78);
+    height: 22px;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: flex-start;
+    box-shadow: 0 0 15px rgb(4, 4, 100);
+}
+
+.category-box input {
+    background-color: transparent;
+    color: white;
+    width: 100%;
+    border: none;
+    outline: none;
+}
+
+.category-box table tr td:hover {
+    background-color: rgb(8, 13, 88);
+}
+
+/*align delete button*/
+#delete-btn {
+    margin-left: auto;
+    background-color: transparent;
+    color: gray;
+    border: none;
+    font-size: 17px;
+    display: flex;
+    justify-self: flex-end;
+    align-self: flex-end;
+}
+
+#notifications {
+    background-color: #e472c9;
+    color: white;
+    position: absolute;
+    margin-left: 45%;
+    max-height: 30px;
+    width: max-content;
+    border-radius: 3px;
+    margin-top: -8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: none;
+    text-transform: capitalize;
+    font-weight: 700;
+}
