@@ -1,4 +1,5 @@
 <?php
+include "./notifications.php";
 $errors = array();
 session_start();
 include "db.php";
