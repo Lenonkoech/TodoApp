@@ -235,23 +235,10 @@ body {
     background-color: transparent;
 }
 
-.delete {
-    margin-left: -170px;
-
-}
-
 .add,
 .delete {
     border-radius: 0px;
     border-color: #e472e9;
-}
-
-.add {
-    margin-right: auto;
-}
-
-.delete {
-    margin-left: px;
 }
 
 .add {
@@ -262,6 +249,16 @@ body {
 .delete:hover {
     background-color: #e472c9;
     color: white;
+}
+
+.delete {
+    margin-left: 20px;
+}
+
+.control-buttons {
+    margin-right: 0;
+    display: flex;
+    justify-content: flex-end;
 }
 
 /* styling To do list table output*/

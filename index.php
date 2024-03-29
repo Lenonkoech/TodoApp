@@ -128,8 +128,10 @@ session_start();
                                     onclick="toggleActive(this)">All</button></li>
                             <?php include "./components/categories.php" ?>
                         </form>
-                        <li><button class="add" id="add-btn" type='submit'>Add Task</button></li>
-                        <li><button class="delete" id="del-btn" type="submit">Delete Selected?</button></li>
+                        <div class="control-buttons">
+                            <li><button class="add" id="add-btn" type='submit'>Add Task</button></li>
+                            <li><button class="delete" id="del-btn" type="submit">Delete Selected?</button></li>
+                        </div>
                     </ul>
                     <div class="details_table">
                         <table>
@@ -152,7 +154,7 @@ session_start();
                                     <td width="130px">
 
                                         <select name="category" id="" class="category" required>
-                                        <?php include "./components/update_options.php"; ?>
+                                            <?php include "./components/update_options.php"; ?>
                                         </select>
 
                                     </td>
