@@ -1,6 +1,7 @@
 <?php
 $errors = array();
 session_start();
+include "notifications.php";
 include "db.php";
 if (isset($_POST['addCategory'])) {
     $category = $_POST['category'];

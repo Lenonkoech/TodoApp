@@ -149,14 +149,15 @@ session_start();
                                     <td width='40px'></td>
                                     <td width="400px"><input type="text" name="description" id="eventTitle"
                                             width="400px" padding-left="5px" required></td>
-                                    <td width="130px"><select name="category" id="" class="category" required>
-                                            <option value="personal">Personal</option>
-                                            <option value="Shopping">Shopping</option>
-                                            <option value="Work">Work</option>
-                                            <option value="Errands">Errands</option>
-                                            <option value="Projects">Projects</option>
-                                        </select></td>
-                                    <td width="130px"><input type="date" name="start-date" id="eventDate" required>
+                                    <td width="130px">
+
+                                        <select name="category" id="" class="category" required>
+                                        <?php include "./components/update_options.php"; ?>
+                                        </select>
+
+                                    </td>
+                                    <td width="130px">
+                                        <inp /ut type="date" name="start-date" id="eventDate" required>
                                     </td>
                                     <td width="130px"><input type="date" name="end-date" id="" required></td>
                                     <td class='status'><input type="text" name="status" value="pending" class="status"
