@@ -1,6 +1,6 @@
 <?php
 session_start();
-?>
+include_once 'components/session_check.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,7 +32,7 @@ session_start();
             // Set timeout to hide the div after 5 seconds
             setTimeout(function () {
                 notificationDiv.style.display = 'none'; // Hide the div
-            }, 1000); // 5000 milliseconds = 5 seconds
+            }, 5000); // 5000 milliseconds = 5 seconds
         });
 
     </script>

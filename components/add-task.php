@@ -6,7 +6,7 @@ include "notifications.php";
 if (isset($_POST['add-task'])) {
     $description = $_POST['description'];
     $category = $_POST['category'];
-    $user = 1;
+    $user = $_SESSION['Username'];
     $start_date = $_POST['start-date'];
     $end_date = $_POST['end-date'];
     $status = $_POST['status'];
@@ -14,5 +14,10 @@ if (isset($_POST['add-task'])) {
     values('$user','$start_date','$end_date','$description','$category','$status')";
     mysqli_query($conn, $sql);
     addNotification("Task added !!!");
-    header("location:../index.php");
+    if (!isset($_SESSION['Username'])) {
+        $_SESSION['msg'] = "LOG in to Account";
+        header("location: ./../../Users/login.php");
+    } else {
+        header("location:../index.php");
+    }
 }
