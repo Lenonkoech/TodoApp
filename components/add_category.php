@@ -8,4 +8,5 @@ if (isset($_POST['addCategory'])) {
     values('$category')";
     mysqli_query($conn, $sql);
     addNotification("Category added !!!");
+    header("./../index.php");
 }
