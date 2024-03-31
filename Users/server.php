@@ -40,7 +40,7 @@ if (isset($_POST['reg-user'])) {
     values('$username','$email','$password_1')";
         mysqli_query($conn, $query);
         $userId = $conn->insert_id;
-        $_SESSION['UserId'] = $userId;
+        $_SESSION['userId'] = $userId;
         $_SESSION['sucess'] = 'Account creation sucess';
         header('location:./../index.php');
     }
