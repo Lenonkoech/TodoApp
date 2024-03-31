@@ -61,11 +61,16 @@ if (isset($_POST['login-user'])) {
     //Loging in a user
     else {
         $password_1 = md5($password);
-        $query = "SELECT *From users where username='$username' and password ='$password_1'";
+        $query = "SELECT * from users where username='$username' and password ='$password_1'";
         $results = mysqli_query($conn, $query);
-        if (mysqli_num_rows($results) == 1) {
-            $userId = $row['id'];
-            $_SESSION['UserId'] = $userId;
+        if (mysqli_num_rows($results) > 0) {
+            while ($row = $results->fetch_assoc()) {
+                echo $row['id'];
+                $userId = $row['id'];
+            }
+
+            // $_SESSION['Username'] = $username;
+            $_SESSION['userId'] = $userId;
             $_SESSION['sucess'] = "You are now logged in";
             header('location: ./../index.php');
         } else {

@@ -159,7 +159,7 @@ include_once 'components/session_check.php'; ?>
 
                                     </td>
                                     <td width="130px">
-                                        <inp /ut type="date" name="start-date" id="eventDate" required>
+                                        <input type="date" name="start-date" id="eventDate" required>
                                     </td>
                                     <td width="130px"><input type="date" name="end-date" id="" required></td>
                                     <td class='status'><input type="text" name="status" value="pending" class="status"

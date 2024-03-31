@@ -19,7 +19,7 @@ include "server.php";
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
-    <?php //include "./../components/notifications.php"           ?>
+    <?php //include "./../components/notifications.php"            ?>
 </head>
 
 <body>
