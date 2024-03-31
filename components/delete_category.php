@@ -10,4 +10,5 @@ if (isset($_POST['deleteCategory'])) {
     $sql = "DELETE FROM categories where id= '$category_id'";
     mysqli_query($conn, $sql);
     addNotification("Category deleted !!!");
+    header("location:../index.php");
 }
