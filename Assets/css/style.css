@@ -463,3 +463,52 @@ body {
     text-transform: capitalize;
     font-weight: 700;
 }
+
+/* style admin login form popup */
+.addAdmin {
+    position: absolute;
+    width: 500px;
+    height: 320px;
+    margin-top: -400px;
+    background-color: white;
+    z-index: 999;
+    margin-left: 35%;
+}
+
+.form form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 24px;
+    gap: 23px;
+}
+
+.form form input {
+    background-color: rgb(212, 246, 255);
+    border-radius: 6px;
+    height: 26px;
+    width: 300px;
+    font-size: 17px;
+    font-weight: 500;
+    border-color: black;
+    border-style: solid;
+    text-align: center;
+}
+
+.form form button {
+    background-color: transparent;
+    font-weight: 400;
+    width: 120px;
+    height: 40px;
+    border-radius: 10px;
+    border-style: solid;
+}
+
+.form form button:hover {
+    background-color: #e472c9;
+}
+
+#adminToggle {
+    display: none;
+}

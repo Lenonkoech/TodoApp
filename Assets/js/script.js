@@ -42,6 +42,10 @@ document.getElementById('mng-delete').addEventListener('click', function () {
 document.getElementById('del-btn').addEventListener('click', function () {
     document.getElementById('delete-task').click();
 });
+//linking admin toggle button
+document.getElementById('add-admin').addEventListener('click', function () {
+    document.getElementById('admin-toggle').click();
+});
 //function to toggle the display of categories
 function toggle() {
     // alert("Button clicked");
@@ -54,16 +58,14 @@ function toggle() {
     }
 }
 
-//code to post date to php on click
-document.getElementById("").addEventListener("change", function () {
-    var date = this.innerText; // Retrieve date value
-    $.ajax({
-        url: "index.ph", // PHP script to handle the request
-        type: "POST",
-        data: { date: date }, // Send date value to PHP script
-        success: function (response) {
-            alert(response); // Log response from PHP script
-        }
-    });
-});
-
+//function to toggle admin login
+function toggleAdmin() {
+    //alert("Button clicked");
+    var adminForm = document.getElementById("adminToggle");
+    if (adminForm.style.display === "none") {
+        adminForm.style.display = "block";
+    }
+    else {
+        adminForm.style.display = "none"
+    }
+}
