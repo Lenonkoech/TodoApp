@@ -100,6 +100,6 @@ Follow these steps if you want to contribute or change anything to the project
     > git push origin my-feature branch (replace my-feature branch with the name of your branch)
 
 
-### _If it is to you liking leave a star and follow_
+### _If it is to your liking leave a star and follow_
 _Happy coding Experience 💻_
 __Adios 🖐🏻❤__ 
