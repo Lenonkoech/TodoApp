@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `todoapp` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */;
-USE `todoapp`;
 -- MySQL dump 10.13  Distrib 8.0.34, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: todoapp
@@ -32,7 +30,7 @@ CREATE TABLE `admin` (
   `password` varchar(256) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,6 +39,7 @@ CREATE TABLE `admin` (
 
 LOCK TABLES `admin` WRITE;
 /*!40000 ALTER TABLE `admin` DISABLE KEYS */;
+INSERT INTO `admin` VALUES (2,'admin','admin','admin@gmail.com','81dc9bdb52d04dc20036dbd8313ed055');
 /*!40000 ALTER TABLE `admin` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -55,7 +54,7 @@ CREATE TABLE `categories` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `category` varchar(256) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -86,7 +85,7 @@ CREATE TABLE `tasks` (
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`),
   CONSTRAINT `tasks_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -95,7 +94,7 @@ CREATE TABLE `tasks` (
 
 LOCK TABLES `tasks` WRITE;
 /*!40000 ALTER TABLE `tasks` DISABLE KEYS */;
-INSERT INTO `tasks` VALUES (2,1,'2023-02-03','2023-02-23','Hello world','personal','pending'),(3,1,'2024-03-27','2024-03-29','Finish bash scripting','Work','pending'),(4,1,'2024-03-29','2024-03-29','Buying groceries','Shopping','pending'),(5,1,'2024-03-28','2024-04-06','Create a to-do-list App','Projects','pending'),(6,1,'2024-05-31','2024-04-05','Pay house rent','Errands','pending'),(10,1,'2024-03-28','2024-04-01','Create employee pay slips','Work','pending'),(11,1,'2024-03-26','2024-03-27','Do homework','personal','complete');
+INSERT INTO `tasks` VALUES (2,3,'2023-02-03','2023-02-23','Hello world','personal','pending'),(3,3,'2024-03-27','2024-03-29','Finish bash scripting','Work','pending'),(4,3,'2024-03-29','2024-03-29','Buying groceries','Shopping','pending'),(5,3,'2024-03-28','2024-04-06','Create a to-do-list App','Projects','pending'),(6,3,'2024-05-31','2024-04-05','Pay house rent','Errands','pending');
 /*!40000 ALTER TABLE `tasks` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -108,13 +107,12 @@ DROP TABLE IF EXISTS `users`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `Name` varchar(70) DEFAULT NULL,
   `username` varchar(70) DEFAULT NULL,
   `Email` varchar(256) DEFAULT NULL,
   `password` varchar(256) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -123,7 +121,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'user','user','user@gmail.com','1234');
+INSERT INTO `users` VALUES (3,'user2','user2@gmail.com','81dc9bdb52d04dc20036dbd8313ed055'),(4,'user3','user3@gmail.com','81dc9bdb52d04dc20036dbd8313ed055');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -136,4 +134,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-03-29 18:28:42
+-- Dump completed on 2024-04-02 19:58:39

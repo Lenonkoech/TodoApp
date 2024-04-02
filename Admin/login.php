@@ -84,6 +84,7 @@ session_start();
             </a>
         </header>
         <main>
+            username :admin password :1234
             <div class="login-form login ">
                 <h2>Login</h2>
                 <form action="login.php" method="post">
