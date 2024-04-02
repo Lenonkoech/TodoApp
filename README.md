@@ -49,7 +49,7 @@ Follow these steps to set up the project on your local machine:
         > cd .\TodoApp\
         > code .
     - This will open the project folder on vs code
-3. **Setting up the Database**:
+3. ### Setting up the Database:
 
     - Open xampp and start Apache and Mysql
     - Press admin on the Mysql section
@@ -57,10 +57,10 @@ Follow these steps to set up the project on your local machine:
     - Press new on the left sidebar
     - Under the Database name enter "todoapp" and leave everything default
     - Press create
-    - On the left sidebar select todoapp and on the top navigation click import and import the sql file in the project "home_db.sql"
+    - On the left sidebar select todoapp and on the top navigation click import and import the sql file in the project "todoapp.sql"
     - scroll to the bottom and click import
     - this will create the database
-4. **Running the Project**:
+4. ### Running the Project:
     - Everytime you want to run the project open xampp and make sure Apache and mySQL is running
     - On the browser enter the path to the project
         > <http://localhost/project/>
