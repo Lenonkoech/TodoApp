@@ -92,14 +92,14 @@ Follow these steps if you want to contribute or change anything to the project
     > git commit -m"commit message here or what changes you have made"
  -               or
     >git commit
-    > this open the vm editor whre rou can write your commit message
-    > press key "i" to enter insert mode.
-    > On completing writing your commit press "esc" button to exit insert mode.
-    > write ":wq" to wite you changes and exit the terminal editor.
-    -Push changes to origin main
+  - > this open the vm editor whre rou can write your commit message
+   - > press key "i" to enter insert mode.
+   - > On completing writing your commit press "esc" button to exit insert mode.
+   - > write ":wq" to wite you changes and exit the terminal editor.
+    - Push changes to origin main
     > git push origin my-feature branch (replace my-feature branch with the name of your branch)
 
 
-# If it is to you liking leave a star and follow
+### _If it is to you liking leave a star and follow_
 _Happy coding Experience 💻_
- __Adios 🖐🏻❤__ 
+__Adios 🖐🏻❤__ 
