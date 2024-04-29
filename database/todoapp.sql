@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `todoapp` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */;
+USE `todoapp`;
 -- MySQL dump 10.13  Distrib 8.0.34, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: todoapp
@@ -85,7 +87,7 @@ CREATE TABLE `tasks` (
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`),
   CONSTRAINT `tasks_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -94,7 +96,7 @@ CREATE TABLE `tasks` (
 
 LOCK TABLES `tasks` WRITE;
 /*!40000 ALTER TABLE `tasks` DISABLE KEYS */;
-INSERT INTO `tasks` VALUES (2,3,'2023-02-03','2023-02-23','Hello world','personal','pending'),(3,3,'2024-03-27','2024-03-29','Finish bash scripting','Work','pending'),(4,3,'2024-03-29','2024-03-29','Buying groceries','Shopping','pending'),(5,3,'2024-03-28','2024-04-06','Create a to-do-list App','Projects','pending'),(6,3,'2024-05-31','2024-04-05','Pay house rent','Errands','pending');
+INSERT INTO `tasks` VALUES (1,1,'2024-04-29','2024-04-30','Create a to-do-list App',' projects','pending'),(2,1,'2024-04-29','2024-04-30','Revise for exam',' personal','pending'),(3,1,'2024-05-01','2024-05-01','Update my job repo',' work','pending'),(4,1,'2024-05-01','2024-05-01','Submit pending projects',' errands','pending'),(5,1,'2024-04-30','2024-04-30','Buying groceries',' shopping','pending');
 /*!40000 ALTER TABLE `tasks` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -112,7 +114,7 @@ CREATE TABLE `users` (
   `password` varchar(256) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -121,7 +123,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (3,'user2','user2@gmail.com','81dc9bdb52d04dc20036dbd8313ed055'),(4,'user3','user3@gmail.com','81dc9bdb52d04dc20036dbd8313ed055');
+INSERT INTO `users` VALUES (1,'user','user@gmail.com','81dc9bdb52d04dc20036dbd8313ed055');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -134,4 +136,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-04-02 19:58:39
+-- Dump completed on 2024-04-29 21:51:40
