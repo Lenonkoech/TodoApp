@@ -41,6 +41,7 @@ if (isset($_POST['reg-user'])) {
         mysqli_query($conn, $query);
         $userId = $conn->insert_id;
         $_SESSION['userId'] = $userId;
+        //  $_SESSION['username'] = $username;
         $_SESSION['sucess'] = 'Account creation sucess';
         header('location:./../index.php');
     }

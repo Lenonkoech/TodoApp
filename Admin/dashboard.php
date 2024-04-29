@@ -131,10 +131,19 @@ if (!isset($_SESSION['Username'])) {
             <div id="right">
                 <div class="tasks-bar">
                     <ul class="tasks">
-                        <form action="dashboard.php" method="post">
+                        <form action="dashboard.php" method="post" id="form">
                             <li><button class="btn" id="mybtn" name="category" type='submit' value="all"
                                     onclick="toggleActive(this)">All</button></li>
                             <?php include "category.php" ?>
+                            <select name="user" id="user_dropdown" onchange="submitForm()"
+                                style="color: white;background-color: rgb(12, 1, 54);border-style :none;">
+                                <option value="">Users</option>
+                                <?php include "getUser.php" ?>
+                            </select>
+                            <script>
+                                function submitForm() {
+                                    document.getElementById(" form").submit();
+                                } </script>
                         </form>
                         <div class="control-buttons">
                             <li><button class="add" id="add-btn" type='submit' style="display:none">Add Task</button>
@@ -166,7 +175,7 @@ if (!isset($_SESSION['Username'])) {
                                     <td width="130px">
 
                                         <!-- <select name="category" id="" class="category" required>
-                                            <?php // include "./components/update_options.php";                                        ?>
+                                            <?php // include "./components/update_options.php";                                                     ?>
                                         </select> -->
 
                                     </td>

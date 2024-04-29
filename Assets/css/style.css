@@ -512,3 +512,8 @@ body {
 #adminToggle {
     display: none;
 }
+
+#user_dropdown {
+    color: white;
+    background-color: transparent;
+}

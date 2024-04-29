@@ -15,7 +15,7 @@ class Get_tasks
             @$date = $_POST["date"];
             //echo $date;
             //echo @$userState;
-            @$sql = "SELECT tasks.* ,users.username FROM tasks inner join users on tasks.user_id=users.id WHERE category= '$category' ";
+            @$sql = "SELECT tasks.* ,users.username FROM tasks inner join users on tasks.user_id=users.id WHERE `category` = ' $category' ";
             $result = $conn->query($sql);
             if ($result->num_rows > 0) {
                 // Output data in a table format
@@ -44,9 +44,25 @@ class Get_tasks
                 @header("location:dashboard.php");
             }
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                @$date = $_POST["date"];
+                //  @$date = $_POST["date"];
                 //echo $date;
-                @$sql = "SELECT tasks.* ,users.username FROM tasks inner join users on tasks.user_id=users.id WHERE status= '$status' ";
+                @$sql = "SELECT tasks.* ,users.username FROM tasks inner join users on tasks.user_id=users.id WHERE `status` = '$status' ";
+                $result = $conn->query($sql);
+                if ($result->num_rows > 0) {
+                    // Output data in a table format
+                    while ($row = $result->fetch_assoc()) {
+                        echo "<tr><td><input type='checkbox' value=" . $row["id"] . " name='task'/></td><td class='description'>" . $row["description"] . "</td><td>" . $row["username"] . "</td><td class='category'>" . $row["category"] . "</td>
+                                                <td>" . $row["start_date"] . "</td><td>" . $row["end_date"] . "</td><td class='status'>" . $row["Status"] . "</td></tr>";
+                    }
+                } else {
+                    // $this->notify('');
+                }
+                @header("location:dashboard.php");
+            }
+            if ($_SERVER['REQUEST_METHOD'] == "POST") {
+                $user = $_POST['user'];
+                //echo $user;
+                $sql = "SELECT tasks.*,users.username FROM tasks inner join users on tasks.user_id=users.id where `user_id`='$user' ";
                 $result = $conn->query($sql);
                 if ($result->num_rows > 0) {
                     // Output data in a table format

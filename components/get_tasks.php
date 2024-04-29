@@ -14,13 +14,14 @@ class Get_tasks
 
         if (isset($_SESSION['userId'])) {
             $userState = $_SESSION['userId'];
+            //echo $userState;
+            // echo $category;
         }
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            @$date = $_POST["date"];
             //echo $date;
             //echo @$userState;
-            @$sql = "SELECT * FROM tasks WHERE category='$category' and user_id= '$userState'  ";
-            $result = $conn->query($sql);
+            @$sql3 = "SELECT * FROM tasks WHERE  `category` = ' $category' and user_id='$userState' ";
+            $result = $conn->query($sql3);
             if ($result->num_rows > 0) {
                 // Output data in a table format
                 while ($row = $result->fetch_assoc()) {
@@ -28,7 +29,7 @@ class Get_tasks
                                                 <td>" . $row["start_date"] . "</td><td>" . $row["end_date"] . "</td><td class='status'>" . $row["Status"] . "</td></tr>";
                 }
             } else {
-                // $this->notify(''); ...dispalys errors
+                $this->notify('No Task found'); //.dispalys errors
                 @header("location:../index.php");
             }
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
