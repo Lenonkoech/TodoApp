@@ -9,3 +9,10 @@ if (isset($_POST['deleteTask'])) {
     addNotification("Task deleted !!!");
     header("location:dashboard.php");
 }
+if ($_SERVER['REQUEST_METHOD'] = "POST") {
+    $task = $_POST["task"];
+    $sql = "UPDATE  tasks SET Status ='complete' where id='$task'";
+    $result = $conn->query($sql);
+    addNotification("Status changed");
+    header("location:dashboard.php");
+}

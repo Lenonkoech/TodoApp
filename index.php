@@ -142,10 +142,15 @@ include_once 'components/session_check.php'; ?>
                             <th>End Date</th>
                             <th>Status</th>
                             <tr class='add-task-row'>
-                                <form action="./components/delete_task.php" method="post">
+                                <form action="./components/delete_task.php" method="post" id="thisForm">
                                     <?php include "./components/get_tasks.php" ?>
                                     <button id="delete-task" type='submit' name='deleteTask'
                                         style='display:none'>Delete</button>
+                                    <script>
+                                        function submitBox() {
+                                            document.getElementById("thisForm").submit();
+                                        }
+                                    </script>
                                 </form>
                                 <form action="./components/add-task.php" method="POST" id="myform">
                                     <td width='40px'></td>

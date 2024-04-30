@@ -25,7 +25,7 @@ class Get_tasks
             if ($result->num_rows > 0) {
                 // Output data in a table format
                 while ($row = $result->fetch_assoc()) {
-                    echo "<tr><td><input type='checkbox' value=" . $row["id"] . " name='task'/></td><td class='description'>" . $row["description"] . "</td><td class='category'>" . $row["category"] . "</td>
+                    echo "<tr><td><input type='checkbox' value=" . $row["id"] . " name='task' onchange='submitBox()'/></td><td class='description'>" . $row["description"] . "</td><td class='category'>" . $row["category"] . "</td>
                                                 <td>" . $row["start_date"] . "</td><td>" . $row["end_date"] . "</td><td class='status'>" . $row["Status"] . "</td></tr>";
                 }
             } else {
@@ -40,7 +40,7 @@ class Get_tasks
                 if ($result->num_rows > 0) {
                     // Output data in a table format
                     while ($row = $result->fetch_assoc()) {
-                        echo "<tr><td><input type='checkbox' value=" . $row["id"] . " name='task'/></td><td class='description'>" . $row["description"] . "</td><td class='category'>" . $row["category"] . "</td>
+                        echo "<tr><td><input type='checkbox' value=" . $row["id"] . " name='task' onchange='submitBox()'/></td><td class='description'>" . $row["description"] . "</td><td class='category'>" . $row["category"] . "</td>
                                                 <td>" . $row["start_date"] . "</td><td>" . $row["end_date"] . "</td><td class='status'>" . $row["Status"] . "</td></tr>";
                     }
                 } else {
@@ -56,7 +56,7 @@ class Get_tasks
                 if ($result->num_rows > 0) {
                     // Output data in a table format
                     while ($row = $result->fetch_assoc()) {
-                        echo "<tr><td><input type='checkbox' value=" . $row["id"] . " name='task'/></td><td class='description'>" . $row["description"] . "</td><td class='category'>" . $row["category"] . "</td>
+                        echo "<tr><td><input type='checkbox' value=" . $row["id"] . " name='task' onchange='submitBox()'/></td><td class='description'>" . $row["description"] . "</td><td class='category'>" . $row["category"] . "</td>
                                                 <td>" . $row["start_date"] . "</td><td>" . $row["end_date"] . "</td><td class='status'>" . $row["Status"] . "</td></tr>";
                     }
                 } else {
@@ -71,7 +71,7 @@ class Get_tasks
                 if ($resultAll->num_rows > 0) {
                     // Output data in a table format
                     while ($row = $resultAll->fetch_assoc()) {
-                        echo "<tr><td><input type='checkbox' name='task' value=" . $row["id"] . "/></td><td class='description'>" . $row["description"] . "</td><td class='category'>" . $row["category"] . "</td>
+                        echo "<tr><td><input type='checkbox' name='task' value=" . $row["id"] . " onchange= 'submitBox()'/></td><td class='description'>" . $row["description"] . "</td><td class='category'>" . $row["category"] . "</td>
                                                 <td>" . $row["start_date"] . "</td><td>" . $row["end_date"] . "</td><td class='status'>" . $row["Status"] . "</td></tr>";
                     }
                 } else {
