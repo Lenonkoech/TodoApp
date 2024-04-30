@@ -142,7 +142,7 @@ if (!isset($_SESSION['Username'])) {
                             </select>
                             <script>
                                 function submitForm() {
-                                    document.getElementById(" form").submit();
+                                    document.getElementById("form").submit();
                                 } </script>
                         </form>
                         <div class="control-buttons">
@@ -161,10 +161,15 @@ if (!isset($_SESSION['Username'])) {
                             <th>End Date</th>
                             <th>Status</th>
                             <tr class='add-task-row'>
-                                <form action="delete-tasks.php" method="post">
+                                <form action="delete-tasks.php" method="post" id="thisForm">
                                     <?php include "./get-tasks.php" ?>
                                     <button id="delete-task" type='submit' name='deleteTask'
                                         style='display:none'>Delete</button>
+                                    <script>
+                                        function submitBox() {
+                                            document.getElementById("thisForm").submit();
+                                        }
+                                    </script>
                                 </form>
                                 <form action="./components/add-task.php" method="POST" id="myform">
                                     <td width='40px'></td>
@@ -175,7 +180,7 @@ if (!isset($_SESSION['Username'])) {
                                     <td width="130px">
 
                                         <!-- <select name="category" id="" class="category" required>
-                                            <?php // include "./components/update_options.php";                                                     ?>
+                                            <?php // include "./components/update_options.php";                                                        ?>
                                         </select> -->
 
                                     </td>
