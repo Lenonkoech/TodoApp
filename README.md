@@ -44,7 +44,7 @@ Follow these steps to set up the project on your local machine:
         >  cd ..\ ..\xampp\htdocs\
     - On terminal run the following command:
         > git clone <https://github.com/Lenonkoech/TodoApp>
-    - This will create a folder in the htdocs folder called Real-estate
+    - This will create a folder in the htdocs folder called todoapp
     - Open the folder with vs code:
         > cd .\TodoApp\
         > code .
