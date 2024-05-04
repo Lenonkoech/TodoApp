@@ -107,12 +107,12 @@ if (!isset($_SESSION['Username'])) {
                                             style="display:none">Delete</button>
                                     </form>
                                     <tr>
-                                        <form action="./components/add_category.php" method="post">
+                                        <!-- <form action="./components/add_category.php" method="post">
                                             <td><input type="text" name="category" placeholder="Add new category ..."
                                                     required>
                                                 <button type="submit" id="add-category" name="addCategory"
-                                                    style="display:none"></button>
-                                            </td>
+                                                    style="display:none"></button> -->
+                                        </td>
                                         </form>
                                     </tr>
                                 </table>
@@ -146,7 +146,7 @@ if (!isset($_SESSION['Username'])) {
                                 } </script>
                         </form>
                         <div class="control-buttons">
-                            <li><button class="add" id="add-btn" type='submit' style="display:none">Add Task</button>
+                            <li><button class="add" id="add-btn" type='submit'>Add Task</button>
                             </li>
                             <li><button class="delete" id="del-btn" type="submit">Delete Selected?</button></li>
                         </div>
@@ -171,29 +171,34 @@ if (!isset($_SESSION['Username'])) {
                                         }
                                     </script>
                                 </form>
-                                <form action="./components/add-task.php" method="POST" id="myform">
+                                <form action="./add-task.php" method="POST" id="myform">
                                     <td width='40px'></td>
                                     <td width="400px">
-                                        <!-- <input type="text" name="description" id="eventTitle" width="400px"
-                                            padding-left="5px" required> -->
+                                        <input type="text" name="description" id="eventTitle" width="400px"
+                                            padding-left="5px" placeholder="Add User a Task" required>
+                                    </td>
+                                    <td width="80px">
+                                        <select name="" id="">
+                                            <?php include "./get-users.php" ?>
+                                        </select>
                                     </td>
                                     <td width="130px">
+                                        <select name="category" id="" class="category" required>
+                                            <?php include "./../components/update_options.php"; ?>
+                                        </select>
 
-                                        <!-- <select name="category" id="" class="category" required>
-                                            <?php // include "./components/update_options.php";                                                        ?>
-                                        </select> -->
-
                                     </td>
                                     <td width="130px">
-                                        <!-- <input type="date" name="start-date" id="eventDate" required> -->
+                                        <input type="date" name="start-date" id="eventDate" required>
                                     </td>
                                     <td width="130px">
-                                        <!-- <input type="date" name="end-date" id="" required> -->
+                                        <input type="date" name="end-date" id="" required>
                                     </td>
-                                    <td class='status'>
-                                        <!-- <input type="text" name="status" value="pending" class="status"required> -->
+                                    <td class='status' width='60px'>
+                                        <input type="text" name="status" value="pending" class="status" required>
                                     </td>
                             </tr>
+                            <button type="submit" id="submit" name='add-task' display='none'>Submit</button>
                             </form>
                         </table>
                     </div>

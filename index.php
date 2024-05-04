@@ -130,6 +130,7 @@ include_once 'components/session_check.php'; ?>
                         </form>
                         <div class="control-buttons">
                             <li><button class="add" id="add-btn" type='submit'>Add Task</button></li>
+                            <!-- <li><button class="complete" id="complete-btn" type="submit">Complete Task</button></li> -->
                             <li><button class="delete" id="del-btn" type="submit">Delete Selected?</button></li>
                         </div>
                     </ul>
@@ -167,8 +168,8 @@ include_once 'components/session_check.php'; ?>
                                         <input type="date" name="start-date" id="eventDate" required>
                                     </td>
                                     <td width="130px"><input type="date" name="end-date" id="" required></td>
-                                    <td class='status'><input type="text" name="status" value="pending" class="status"
-                                            required></td>
+                                    <td width="80px" class='status'><input type="text" name="status" value="pending"
+                                            class="status" required></td>
                             </tr>
                             <button type="submit" id="submit" name='add-task' display='none'>Submit</button>
                             </form>

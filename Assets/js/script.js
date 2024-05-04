@@ -69,3 +69,7 @@ function toggleAdmin() {
         adminForm.style.display = "none"
     }
 }
+//complete status script code
+window.onload=function(){
+    var status="<?php echo"
+}
